@@ -1,0 +1,14 @@
+1 step. Create Java Class Main in project HomeWork_2. Add dependencies Create MANIFEST.MF 
+
+2 step. Compile Main.java with dependencies
+	javac -cp ./src/main/java ./src/main/java/com/epam/Main.java -d ./out/ -classpath ./libs/junit-4.12.jar;hamcrest-core-1.3.jar
+	
+3 step Copy dependencies jar into folder out/. Unpack jar files
+	cd out/
+	jar xf junit-4.12.jar hamcrest-core-1.3.jar
+
+4 step Create Main.jar
+	jar cvfm Main.jar ./src/main/resources/META-INF/MANIFEST.MF -C ./out/ .
+	
+5 step Final output
+	java -jar ./Main.jar
