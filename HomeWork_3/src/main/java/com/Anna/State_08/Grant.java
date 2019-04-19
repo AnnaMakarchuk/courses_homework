@@ -4,7 +4,7 @@ public class Grant {
 
     private State state;
 
-    public Grant () {
+    public Grant() {
         this.state = new DraftState(this);
     }
 
@@ -16,8 +16,8 @@ public class Grant {
         this.state = state;
     }
 
-    public void changeState (State state) {
-         this.state = state;
+    public void changeState(State state) {
+        this.state = state;
     }
 
     public void receiveFeedback() {

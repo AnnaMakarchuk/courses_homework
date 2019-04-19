@@ -5,7 +5,7 @@ public class Bacteria {
     private BacteriaColor color;
     private String name;
 
-    public Bacteria (String name, BacteriaColor color) {
+    public Bacteria(String name, BacteriaColor color) {
         this.name = name;
         this.color = color;
     }

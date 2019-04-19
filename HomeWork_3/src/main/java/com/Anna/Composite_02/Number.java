@@ -4,7 +4,7 @@ public class Number implements Composite {
 
     private int number;
 
-    public Number (int number) {
+    public Number(int number) {
         this.number = number;
     }
 

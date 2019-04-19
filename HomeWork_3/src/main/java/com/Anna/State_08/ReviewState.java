@@ -10,13 +10,12 @@ public class ReviewState extends State {
     @Override
     public void receiveFeedback() {
         System.out.println("Waiting commision desicion");
-
     }
 
     @Override
     public void publishing() {
         receiveFeedback();
         System.out.println(("Commision is making desicion"));
-        grant.changeState(new PublishingState (grant));
+        grant.changeState(new PublishingState(grant));
     }
 }

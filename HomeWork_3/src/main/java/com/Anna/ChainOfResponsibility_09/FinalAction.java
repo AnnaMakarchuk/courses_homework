@@ -3,7 +3,6 @@ package com.Anna.ChainOfResponsibility_09;
 public class FinalAction implements Action {
     @Override
     public void setNext(Action nextAction) {
-
     }
 
     @Override

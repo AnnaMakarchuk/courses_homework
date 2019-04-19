@@ -14,10 +14,10 @@ public class AbstractFactory {
         FilmDistributionFactory factory = AbstractFactory.getFilmDistributionFactory(type);
         Language language = factory.setLanguage();
         Subtitle subtitle = factory.setSubtitles();
-        new FilmDistribution (language, subtitle);
+        new FilmDistribution(language, subtitle);
     }
 
-    public static FilmDistributionFactory getFilmDistributionFactory (DistributionType type) {
+    public static FilmDistributionFactory getFilmDistributionFactory(DistributionType type) {
         switch (type) {
             case UKRAINIAN:
                 return new UkrainianFilmDistributionFactory();
@@ -25,12 +25,13 @@ public class AbstractFactory {
                 return new EnglishFilmDistributionFactory();
             case RUSSIAN:
                 return new RussianFilmDistributionFactory();
-            default: throw new IllegalArgumentException();
+            default:
+                throw new IllegalArgumentException();
         }
     }
 
-    public static FilmDistributionFactory getFilmDistributionFactory (String type) {
-        return AbstractFactory.getFilmDistributionFactory (DistributionType.valueOf(type.toUpperCase()));
+    public static FilmDistributionFactory getFilmDistributionFactory(String type) {
+        return AbstractFactory.getFilmDistributionFactory(DistributionType.valueOf(type.toUpperCase()));
     }
 
 

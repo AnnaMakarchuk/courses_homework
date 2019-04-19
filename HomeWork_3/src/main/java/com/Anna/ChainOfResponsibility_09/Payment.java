@@ -9,8 +9,8 @@ public class Payment {
     private final double paymentAmount;
     private final PaymentType paymentType;
 
-    public Payment (String accountNumber, String accountHolderName, String accountHolderSurname, String toAccount,
-                    double paymentAmount, PaymentType paymentType){
+    public Payment(String accountNumber, String accountHolderName, String accountHolderSurname, String toAccount,
+                   double paymentAmount, PaymentType paymentType) {
         this.accountNumber = accountNumber;
         this.accountHolderName = accountHolderName;
         this.accountHolderSurname = accountHolderSurname;

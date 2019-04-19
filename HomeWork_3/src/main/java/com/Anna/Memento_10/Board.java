@@ -1,39 +1,38 @@
 package com.Anna.Memento_10;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Board {
 
     private Point point;
-    private  Map<Point, String> gameFieldMap;
+    private Map<Point, String> gameFieldMap = new HashMap<>();
 
-    public Board () {
-        gameFieldMap = new HashMap<>();
+    public Board(Map<Point, String> gameFieldMap) {
+        this.gameFieldMap = gameFieldMap;
     }
 
-    public void move(int playerNumber, int xPoint, int yPoint){
-        if (checkPoint(xPoint, yPoint)) {
+    public void move(int playerNumber, int xPoint, int yPoint) {
+        if (checkPointInMap(xPoint, yPoint)) {
             point = new Point(xPoint, yPoint);
-            switch (playerNumber){
+            switch (playerNumber) {
                 case 1:
                     gameFieldMap.put(point, "x");
                     break;
                 case 2:
                     gameFieldMap.put(point, "0");
                     break;
-                default: throw new IllegalArgumentException("only 2 players available");
+                default:
+                    throw new IllegalArgumentException("only 2 players available");
             }
         }
         System.out.println("Player " + playerNumber + " with move " + xPoint + ", " + yPoint);
     }
 
-    public boolean checkPoint(int x, int y){
+    public boolean checkPointInMap(int x, int y) {
         point = new Point(x, y);
-        if (!point.checkPoint() && gameFieldMap.containsKey(point)) {
-            return false;
-        }
-        return true;
+        if (point.checkPoint() && !gameFieldMap.containsKey(point)) {
+            return true;
+        } else throw new IllegalArgumentException("this move was made");
     }
 
     public Memento save() {

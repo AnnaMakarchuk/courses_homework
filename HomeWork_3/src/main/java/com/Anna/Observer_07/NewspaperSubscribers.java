@@ -2,7 +2,7 @@ package com.Anna.Observer_07;
 
 public class NewspaperSubscribers implements Subscribers {
 
-    public NewspaperSubscribers () {
+    public NewspaperSubscribers() {
     }
 
     @Override

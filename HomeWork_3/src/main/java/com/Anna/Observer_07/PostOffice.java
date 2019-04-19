@@ -5,7 +5,7 @@ import java.util.List;
 public class PostOffice {
     private List<Subscribers> subscribersList;
 
-    public PostOffice(){
+    public PostOffice() {
         this.subscribersList = SubsribersList.createSubribers();
     }
 
@@ -13,7 +13,7 @@ public class PostOffice {
         for (Subscribers subscriber : subscribersList) {
             if (subscriber instanceof NewspaperSubscribers) {
                 subscriber.receivePublication();
-            } else if (subscriber instanceof JournalSubsribers){
+            } else if (subscriber instanceof JournalSubsribers) {
                 subscriber.receivePublication();
             } else throw new IllegalArgumentException();
         }

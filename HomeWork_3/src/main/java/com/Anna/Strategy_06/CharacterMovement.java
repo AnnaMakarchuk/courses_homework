@@ -11,7 +11,7 @@ public class CharacterMovement {
         this.strategy = strategy;
     }
 
-    public void move (CharacterType type) {
+    public void move(CharacterType type) {
         switch (type) {
             case MAGE:
                 setStrategy(new StrategyFlight());

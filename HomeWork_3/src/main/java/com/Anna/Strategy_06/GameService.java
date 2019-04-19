@@ -7,7 +7,7 @@ public class GameService {
     private CharacterMovement movement;
     List<GameCharacters> gameCharactersList = new ArrayList<>();
 
-    public GameService (CharacterMovement movement) {
+    public GameService(CharacterMovement movement) {
         this.movement = movement;
     }
 
@@ -24,7 +24,7 @@ public class GameService {
 
     public void playing() {
         gameCharactersList = createGamesCharacters();
-        for (GameCharacters character: gameCharactersList) {
+        for (GameCharacters character : gameCharactersList) {
             System.out.println(character);
             movement.move(character.getCharacterType());
         }

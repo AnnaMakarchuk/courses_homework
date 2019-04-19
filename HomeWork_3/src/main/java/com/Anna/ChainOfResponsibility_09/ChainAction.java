@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class ChainAction {
 
-    public void buildAction (Payment payment) {
+    public void buildAction(Payment payment) {
         switch (payment.getPaymentType()) {
             case USUAL:
                 buildActionUsualPayments(payment);
@@ -18,7 +18,7 @@ public class ChainAction {
         }
     }
 
-    public void buildActionUsualPayments (Payment payment) {
+    public void buildActionUsualPayments(Payment payment) {
         Action actionAccept = new ActionPaymentAcceptance();
         Action actionPost = new ActionPaymentPosting();
         Action actionPercent = new ActionCalculateUsualPaymentPercent();
@@ -33,7 +33,7 @@ public class ChainAction {
         actionFinal.process(payment);
     }
 
-    public void buildActionStatePayments (Payment payment) {
+    public void buildActionStatePayments(Payment payment) {
         Action actionPost = new ActionPaymentPosting();
         Action actionAccept = new ActionPaymentAcceptance();
         Action actionPercent = new ActionCalculateStatePaymentPercent();
@@ -48,7 +48,7 @@ public class ChainAction {
         actionFinal.process(payment);
     }
 
-    public void buildActionPreferencialPayments (Payment payment) {
+    public void buildActionPreferencialPayments(Payment payment) {
         Action actionPost = new ActionPaymentPosting();
         Action actionAccept = new ActionPaymentAcceptance();
         Action actionPercent = new ActionCalculatePreferentialPaymentPercent();

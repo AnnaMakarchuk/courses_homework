@@ -14,7 +14,7 @@ public class TestFactory {
     }
 
     public static List<Figure> getRandom(List<Figure> list) {
-        List <Figure> randomList = new ArrayList<>();
+        List<Figure> randomList = new ArrayList<>();
 
         Random randomGenerator = new Random();
         int randomListSize = randomGenerator.nextInt(list.size());

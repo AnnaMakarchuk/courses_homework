@@ -20,14 +20,11 @@ public class BacteriaFactory {
                 case HELICOBACTER:
                     bacteria = new Bacteria("helicobacter", BacteriaColor.VIOLET);
                     break;
-                default: throw new IllegalArgumentException();
+                default:
+                    throw new IllegalArgumentException();
             }
             bacteriaMap.put(bacteriaType, bacteria);
         }
         return bacteria;
     }
-//
-//    private String getType (BacteriaType bacteriaType) {
-//
-//    }
 }

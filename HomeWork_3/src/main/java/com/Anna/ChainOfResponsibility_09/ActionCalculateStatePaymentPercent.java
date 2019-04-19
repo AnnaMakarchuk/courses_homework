@@ -11,7 +11,7 @@ public class ActionCalculateStatePaymentPercent implements Action {
 
     @Override
     public void process(Payment payment) {
-        System.out.println("The percentage 0.05% is calculated = " + payment.getPaymentAmount()*0.05/100);
+        System.out.println("The percentage 0.05% is calculated = " + payment.getPaymentAmount() * 0.05 / 100);
     }
 }
 

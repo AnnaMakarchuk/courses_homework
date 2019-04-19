@@ -5,6 +5,7 @@ import com.Anna.AbstractFactory_03.models.Subtitle;
 
 public interface FilmDistributionFactory {
 
-    Language setLanguage ();
+    Language setLanguage();
+
     Subtitle setSubtitles();
 }

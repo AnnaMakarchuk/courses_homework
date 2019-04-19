@@ -5,12 +5,12 @@ import java.util.List;
 
 public class WikiArticlesService {
 
-    public List<Articles> createSpecificArticleCopy (ArticleType type){
+    public List<Articles> createSpecificArticleCopy(ArticleType type) {
         List<Articles> wikiArticlesList = WikiArticlesService.createArticlesList();
         List<Articles> copyArticlesList = new ArrayList<>();
-        for (Articles article: wikiArticlesList) {
+        for (Articles article : wikiArticlesList) {
             if (article.getArticleType() == type) {
-            copyArticlesList.add(article.clone());
+                copyArticlesList.add(article.clone());
             }
         }
         return copyArticlesList;

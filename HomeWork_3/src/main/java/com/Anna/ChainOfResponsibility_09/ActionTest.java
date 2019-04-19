@@ -10,7 +10,7 @@ public class ActionTest {
     public static void main(String[] args) {
         paymentList = createPayments();
         ChainAction chainAction = new ChainAction();
-        for (Payment payment: paymentList) {
+        for (Payment payment : paymentList) {
             System.out.println(payment);
             chainAction.buildAction(payment);
             System.out.println("***");

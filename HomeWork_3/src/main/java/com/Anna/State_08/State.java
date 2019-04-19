@@ -4,7 +4,7 @@ public abstract class State {
 
     protected Grant grant;
 
-    public State (Grant grant) {
+    public State(Grant grant) {
         this.grant = grant;
     }
 
@@ -17,5 +17,6 @@ public abstract class State {
     }
 
     public abstract void receiveFeedback();
+
     public abstract void publishing();
 }

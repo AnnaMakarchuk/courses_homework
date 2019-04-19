@@ -1,6 +1,6 @@
 package com.Anna.Composite_02;
 
-public abstract class Operations implements Composite{
+public abstract class Operations implements Composite {
 
     private Composite secondValue;
     private Composite firstValue;

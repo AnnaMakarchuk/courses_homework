@@ -1,14 +1,19 @@
 package com.Anna.Memento_10;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class PlayGame {
+
+    private static Map<Point, String> gameFieldMap = new HashMap<>();
+    private static GameService game = new GameService(new Board(gameFieldMap));
+
     public static void main(String[] args) {
-        testMemento();
+        playGame();
     }
 
     private static void testMemento() {
-        GameService game = new GameService();
         System.out.println("Player 1 move");
         game.gameMove(1, 1, 1);
         game.saveMove();
@@ -34,7 +39,6 @@ public class PlayGame {
     }
 
     private static void playGame() {
-        GameService game = new GameService();
         Scanner in = new Scanner(System.in);
         int playerNumber;
         int xPoint;

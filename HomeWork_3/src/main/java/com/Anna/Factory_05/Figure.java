@@ -1,11 +1,11 @@
 package com.Anna.Factory_05;
 
 public class Figure {
-    private  String shape;
+    private String shape;
     private Color color;
     private int size;
 
-    public Figure (Color color, int size, String shape) {
+    public Figure(Color color, int size, String shape) {
         this.color = color;
         this.size = size;
         this.shape = shape;

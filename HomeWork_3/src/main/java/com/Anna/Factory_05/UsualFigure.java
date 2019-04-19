@@ -19,7 +19,7 @@ public class UsualFigure extends Figure {
 
     @Override
     public String toString() {
-        return "\nUsualFigure{"+ super.toString() +
+        return "\nUsualFigure{" + super.toString() +
                 '}';
     }
 }

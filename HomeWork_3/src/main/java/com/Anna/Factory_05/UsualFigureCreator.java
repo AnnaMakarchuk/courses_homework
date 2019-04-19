@@ -7,7 +7,7 @@ public class UsualFigureCreator implements FigureCreator {
 
     @Override
     public List<Figure> createFigures() {
-        List <Figure> figures = new ArrayList<>();
+        List<Figure> figures = new ArrayList<>();
         figures.add(new UsualFigure(Color.RED, 4, "line"));
         figures.add(new UsualFigure(Color.YELLOW, 4, "line"));
         figures.add(new UsualFigure(Color.BLUE, 4, "line"));

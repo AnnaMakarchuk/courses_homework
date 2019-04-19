@@ -2,18 +2,18 @@ package com.Anna.UnknownPattern_12;
 
 import java.time.LocalDate;
 
-public final class Reciept implements Cloneable{
+public final class Reciept implements Cloneable {
 
     private final String patientName;
     private final LocalDate receiptDuration;
     private final String doctorName;
     private final String medicine;
 
-    public Reciept( String patientName, String doctorName, String medicine, LocalDate receiptDuration) {
+    public Reciept(String patientName, String doctorName, String medicine, LocalDate receiptDuration) {
         this.patientName = patientName;
         this.doctorName = doctorName;
         this.medicine = medicine;
-        this.receiptDuration =receiptDuration;
+        this.receiptDuration = receiptDuration;
     }
 
     public String getPatientName() {

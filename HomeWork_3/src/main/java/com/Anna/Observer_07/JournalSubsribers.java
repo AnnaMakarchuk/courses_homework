@@ -2,7 +2,7 @@ package com.Anna.Observer_07;
 
 public class JournalSubsribers implements Subscribers {
 
-    public JournalSubsribers () {
+    public JournalSubsribers() {
     }
 
     @Override

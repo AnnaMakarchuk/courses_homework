@@ -1,6 +1,6 @@
 package com.Anna.Strategy_06;
 
-public class StrategyFlight implements Strategy{
+public class StrategyFlight implements Strategy {
 
     @Override
     public void move() {

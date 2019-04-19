@@ -1,9 +1,18 @@
 package com.Anna.Memento_10;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class GameService {
 
-    private Board board = new Board();
+    private Map<Point, String> gameFieldMap = new HashMap<>();
+    private Board board = new Board(gameFieldMap);
     private Memento memento = new Memento(board.getGameFieldMap());
+
+
+    public GameService(Board board) {
+        this.board = board;
+    }
 
     public void gameMove(int playerNumber, int xPoint, int yPoint) {
         board.move(playerNumber, xPoint, yPoint);
@@ -19,7 +28,7 @@ public class GameService {
 
     public boolean gameCheckout(int playerNumber, int xPoint, int yPoint) {
         String cell = null;
-        switch (playerNumber){
+        switch (playerNumber) {
             case 1:
                 cell = "x";
                 break;
@@ -35,7 +44,7 @@ public class GameService {
     }
 
     private boolean checkVertical(int xPoint, String cell) {
-        for (int i = 1; i <= 3 ; i++) {
+        for (int i = 1; i <= 3; i++) {
             Point checkPoint = new Point(xPoint, i);
             String checkCell = board.getGameFieldMap().get(checkPoint);
             if (checkCell == null || !checkCell.equals(cell)) {
@@ -46,7 +55,7 @@ public class GameService {
     }
 
     private boolean checkHorizontal(int yPoint, String check) {
-        for (int i = 1; i <= 3 ; i++) {
+        for (int i = 1; i <= 3; i++) {
             String checkCell = board.getGameFieldMap().get(new Point(i, yPoint));
             if (checkCell == null || !checkCell.equals(check)) {
                 return false;
@@ -59,9 +68,9 @@ public class GameService {
         if (xPoint != yPoint) {
             return false;
         }
-        for (int i = 1; i <= 3 ; i++) {
-        String checkCell = board.getGameFieldMap().get(new Point(i, i));
-            if (checkCell == null || !checkCell.equals(cell)){
+        for (int i = 1; i <= 3; i++) {
+            String checkCell = board.getGameFieldMap().get(new Point(i, i));
+            if (checkCell == null || !checkCell.equals(cell)) {
                 return false;
             }
         }
