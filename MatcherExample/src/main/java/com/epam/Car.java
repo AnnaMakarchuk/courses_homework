@@ -1,6 +1,6 @@
 package com.epam;
 
-public class Car  {
+public class Car  extends Object{
     private String name;
     private double engineVolume;
     private int yearProduction;
